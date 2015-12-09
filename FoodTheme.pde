@@ -12,8 +12,8 @@ fatguy myfatguy;
 void setup(){
  background (255);
  size(1000,800);
- full = loadImage("fullplate-melih-kesmen.jpg");
- empty = loadImage("20130304-153222.jpg");
+ full = loadImage("https://raw.githubusercontent.com/nrob170/MAGD-Assignments/master/Robinson_Lab_01_Assignent_07/data/full%20plate.jpg");
+ empty = loadImage("https://raw.githubusercontent.com/nrob170/MAGD-Assignments/master/Robinson_Lab_01_Assignent_07/data/20130304-153222.jpg");
  myskinnyguy = new skinnyguy();
  myfatguy = new fatguy();
 }
