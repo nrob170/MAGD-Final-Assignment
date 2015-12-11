@@ -11,8 +11,8 @@ void setup(){
   myTimer = new Timer(7000);
   myanimals = new animals();
   mymvmt = new mvmt();
-  G = loadImage("Grassland.jpg");
-  S = loadImage("Savannah.jpg");
+  G = loadImage("https://raw.githubusercontent.com/nrob170/MAGD-Assignments/master/Robinson_Lab_Assignment_08/Grassland.jpg");
+  S = loadImage("https://raw.githubusercontent.com/nrob170/MAGD-Assignments/master/Robinson_Lab_Assignment_08/Savannah.jpg");
   
   
 }
