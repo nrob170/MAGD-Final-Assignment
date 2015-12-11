@@ -331,7 +331,301 @@ void keyPressed(){
   <h1>Movie Theme (Assignment #3)</h1>
   <script type="text/processing" data-processing-target="mycanvas3">
   
-  <!-- Your sketch3 goes here -->
+int pressState = 0;//everything with the word "pressState" is used to make it so the logos change and stay until next click
+int zxc = 650;
+int asd = 770;
+int value = 200;
+//above are variables I set to allow myself to use easier inputs for numbers I'll use a lot in this code
+//intial setup
+void setup(){
+ size(800,800);
+  background(30,16,118);
+}
+ //setup/background for loop 
+void draw(){
+   background(0);
+    rectMode(CORNERS);
+    fill(#FCF9D9);
+    ellipseMode(CENTER);
+    ellipse(800,0,300,300);
+    fill(120);
+    rectMode(CORNERS);
+    rect(0,600,100,200);
+    rect(100,490,160,600);
+    rect(180,309,250,600);
+    rect(260,343,400,600);
+    rect(400,200,500,600);
+    rect(504,82,540,600);
+    rect(550,403,600,600);
+    rect(600,595,605,600);
+    rect(605,200,695,600);
+    rect(700,400,790,600);
+    rect(790,583,795,600);
+    fill(255);
+     noStroke();
+     rect(0,600, 800,800);
+     fill(200);
+     rect(0,620,800,800);
+     
+     
+   
+     //static matching word
+     strokeWeight(5);
+     stroke(value);
+     //t
+     line(30,zxc,66,zxc);
+     line(48,zxc,48,asd);
+     //r
+     line(86,zxc,86,asd);
+      noFill();
+      arc(86,680,72,60,-PI/2,PI/2);
+     line(86,710,122,asd);
+     //a
+     line(160,zxc,142,asd);
+     line(160,zxc,178,asd);
+     line(151,710,169,710);
+     //n
+     line(198,zxc,198,asd);
+     line(198,zxc,234,asd);
+     line(234,zxc,234,asd);
+     //s 
+     line(254,zxc,290,zxc);
+     line(254,zxc,254,710);
+     line(254,710,290,710);
+     line(290,710,290,asd);
+     line(254,asd,290,asd);
+     //f
+     line(310,zxc,310,asd);
+     line(310,zxc,346,zxc);
+     line(310,710,346,710);
+     //o
+     ellipse(384,710,36,120);
+     //r
+     line(422,zxc,422,asd);
+     noFill();
+     arc(422,680,72,60,-PI/2,PI/2);
+     line(422,710,458,asd);
+     //m
+     line(478,zxc,478,asd);
+     line(478,zxc,496,asd);
+     line(496,asd,514,zxc);
+     line(514,zxc,514,asd);
+     //e
+     line(534,zxc,534,asd);
+     line(534,zxc,570,zxc);
+     line(534,710,570,710);
+     line(534,asd,570,asd);
+     //r
+      line(590,zxc,590,asd);
+      arc(590,680,72,60,-PI/2,PI/2);
+      line(590,710,626,asd);
+      //s
+      line(646,zxc,682,zxc);
+      line(646,zxc,646,710);
+      line(646,710,682,710);
+      line(682,710,682,asd);
+      line(682,asd,646,asd);
+      //!!!
+      line(702,zxc,702,750);
+      point(702,asd);
+      line(722,zxc,722,750);
+      point(722,asd);
+      line(742,zxc,742,750);
+      point(742,asd);
+ 
+    //below is the clickable logos
+    noStroke();
+    rectMode(CENTER);
+    fill(220,0,0);
+    if (pressState == 0){
+    //autobot
+      strokeWeight(10);
+stroke(255);
+fill(255,0,0);
+beginShape();
+vertex(mouseX-25,mouseY+100);
+vertex(mouseX+25,mouseY+100);//bottom
+vertex(mouseX+25,mouseY);//right rise
+vertex(mouseX+38,mouseY-80);//right side angle
+vertex(mouseX, mouseY-63);//midpoint of top
+vertex(mouseX-38, mouseY-80);//fall back down
+vertex(mouseX-25,mouseY);
+vertex(mouseX-25,mouseY+100);
+endShape();
+
+beginShape();
+vertex(mouseX,mouseY-72);//bottom point
+vertex(mouseX+125,mouseY-125);
+vertex(mouseX+137,mouseY-175);
+vertex(mouseX,mouseY-180);//midpoint
+vertex(mouseX-137,mouseY-175);
+vertex(mouseX-125,mouseY-125);
+vertex(mouseX,mouseY-72);
+endShape();
+
+beginShape();
+vertex(mouseX-34,mouseY);
+vertex(mouseX-47,mouseY-85);
+vertex(mouseX-134,mouseY-125);
+vertex(mouseX-146,mouseY-180);
+vertex(mouseX-200,mouseY-185);
+vertex(mouseX-175,mouseY-50);
+vertex(mouseX-112,mouseY-10);
+vertex(mouseX-34,mouseY);
+endShape();
+
+beginShape();
+vertex(mouseX+34,mouseY);
+vertex(mouseX+47,mouseY-85);
+vertex(mouseX+134,mouseY-125);
+vertex(mouseX+146,mouseY-180);
+vertex(mouseX+200,mouseY-185);
+vertex(mouseX+175,mouseY-50);
+vertex(mouseX+112,mouseY-10);
+vertex(mouseX+34,mouseY);
+endShape();
+
+beginShape();
+vertex(mouseX-163,mouseY-32);
+vertex(mouseX-121,mouseY-5);
+vertex(mouseX-121,mouseY+17);
+vertex(mouseX-87,mouseY+37);
+vertex(mouseX-87,mouseY+163);
+vertex(mouseX-153,mouseY+113);
+vertex(mouseX-163,mouseY-32);
+endShape();
+
+beginShape();
+vertex(mouseX+163,mouseY-32);
+vertex(mouseX+121,mouseY-5);
+vertex(mouseX+121,mouseY+17);
+vertex(mouseX+87,mouseY+37);
+vertex(mouseX+87,mouseY+163);
+vertex(mouseX+153,mouseY+113);
+vertex(mouseX+163,mouseY-32);
+endShape();
+
+beginShape();
+vertex(mouseX-30,mouseY+10);
+vertex(mouseX-30,mouseY+100);
+vertex(mouseX+30,mouseY+100);
+vertex(mouseX+30,mouseY+10);
+vertex(mouseX+83,mouseY+34);
+vertex(mouseX+83,mouseY+167);
+vertex(mouseX+58,mouseY+190);
+vertex(mouseX+30,mouseY+138);
+vertex(mouseX-30,mouseY+138);
+vertex(mouseX-58,mouseY+190);
+vertex(mouseX-83,mouseY+167);
+vertex(mouseX-83,mouseY+34);
+vertex(mouseX-30,mouseY+10);
+endShape();
+
+beginShape();
+vertex(mouseX-54,mouseY+192);
+vertex(mouseX+54,mouseY+192);
+vertex(mouseX+28,mouseY+136);
+vertex(mouseX-28,mouseY+136);
+vertex(mouseX-56,mouseY+185);
+endShape();
+
+fill(255);
+beginShape();
+vertex(mouseX-30,mouseY+10);
+vertex(mouseX-83,mouseY+34);
+vertex(mouseX-121,mouseY+17);
+vertex(mouseX-121,mouseY-5);
+vertex(mouseX-30,mouseY+10);
+endShape();
+
+beginShape();
+vertex(mouseX+30,mouseY+10);
+vertex(mouseX+83,mouseY+34);
+vertex(mouseX+121,mouseY+17);
+vertex(mouseX+121,mouseY-5);
+vertex(mouseX+30,mouseY+10);
+endShape();
+
+triangle(mouseX,mouseY-120,mouseX-40,mouseY-140,mouseX+40,mouseY-140);
+line(mouseX-150,mouseY-100,mouseX-75,mouseY-63);
+line(mouseX-150,mouseY-75,mouseX-75,mouseY-38);
+line(mouseX+150,mouseY-100,mouseX+75,mouseY-63);
+line(mouseX+150,mouseY-75,mouseX+75,mouseY-38);
+noStroke();
+    }
+    if (pressState == 1){
+      rectMode(CENTER);
+       strokeWeight(5);
+  stroke(255);
+  fill(186,96,211);
+  beginShape();
+  vertex(mouseX+13,mouseY-6);
+  vertex(mouseX+33,mouseY-33);
+  vertex(mouseX+58,mouseY-181);
+  vertex(mouseX+25,mouseY-125);
+  vertex(mouseX-25,mouseY-125);
+  vertex(mouseX-58,mouseY-181);
+  vertex(mouseX-33,mouseY-33);
+  vertex(mouseX-13,mouseY-6);
+  vertex(mouseX+13,mouseY-6);
+endShape();
+
+beginShape();
+vertex(mouseX,mouseY+33);
+vertex(mouseX+33,mouseY-13);//first corner
+vertex(mouseX+119,mouseY-33);//first indent point
+vertex(mouseX+125,mouseY-57);//point above first
+vertex(mouseX+57,mouseY-39);//first out strecth
+vertex(mouseX+60,mouseY-56);//above first outstretch
+vertex(mouseX+125,mouseY-75);//2nd indent
+vertex(mouseX+125,mouseY-93);//above 2nd indent
+vertex(mouseX+62,mouseY-75);//2nd outstretch
+vertex(mouseX+69,mouseY-109);//point above 2nd outstretch
+vertex(mouseX+132,mouseY-125);//corner before right tip
+vertex(mouseX+175,mouseY-200);//right tip
+vertex(mouseX+154,mouseY-43);//drop from right corner
+vertex(mouseX,mouseY+175);//bottom
+vertex(mouseX-154,mouseY-43);//drom from left corner
+vertex(mouseX-175,mouseY-200);//left tip
+vertex(mouseX-132,mouseY-125);//corner before left tip
+vertex(mouseX-69,mouseY-109);//point above 3rd outstretch
+vertex(mouseX-62,mouseY-75);//3rd outstretch
+vertex(mouseX-125,mouseY-93);//above 3rd indent
+vertex(mouseX-125,mouseY-75);//3rd indent
+vertex(mouseX-60,mouseY-56);//above 4th outstretch
+vertex(mouseX-57,mouseY-39);//4th outstretch
+vertex(mouseX-125,mouseY-57);//point above fourth
+vertex(mouseX-119,mouseY-33);//fourth indent point
+vertex(mouseX-33,mouseY-13);//last corner
+vertex(mouseX,mouseY+33);//bottom
+endShape();
+
+triangle(mouseX+150,mouseY-12,mouseX+25,mouseY+169,mouseX+131,mouseY+100);
+triangle(mouseX-150,mouseY-12,mouseX-25,mouseY+169,mouseX-131,mouseY+100);
+
+fill(255);
+triangle(mouseX-81,mouseY,mouseX-15,mouseY+31,mouseX-31,mouseY+65);
+triangle(mouseX+81,mouseY,mouseX+15,mouseY+31,mouseX+31,mouseY+65);
+triangle(mouseX,mouseY-43,mouseX+19,mouseY-87,mouseX-19,mouseY-87);
+noStroke();
+    }
+}
+
+ //below is the keypress (it will be a word)
+ void keyPressed(){
+  if (value == 200){   
+     value = 1;
+    }else{
+    value = 200;
+      }   
+}  
+ //this is what changes the shape; the modulo (%) it what the number is dividing by; 
+ //when the next number added by 1 (first pressState) is added to a consececutive number,
+ // the modulo then divides that number by 2 and and the remainder will be the shape, according to the variables set.   
+void mousePressed(){
+  pressState=pressState + 1;
+  pressState=(pressState % 2);
+ }
 
   </script>
   <canvas id="mycanvas3"></canvas>
@@ -341,7 +635,187 @@ void keyPressed(){
   <h1>Abstract Art (Assignment #2)</h1>
   <script type="text/processing" data-processing-target="mycanvas4">
   
-  <!-- Your sketch4 goes here -->
+  void draw(){
+ loop();
+//non-moving objects
+//golden background
+  background(255);
+  size(1300,900);
+  
+  //left side as violet
+  noStroke();
+  fill(105,0,145);
+  rectMode(CORNERS);
+  rect(0,0,650,900);
+  
+  //design; not moveable
+  fill(220,170,0);
+  arc(650,100,1296,120,-PI/2,PI/2);
+  
+
+  fill(0);
+  arc(650,100.5,1295,120,1.572,3*PI/2);
+  
+  fill(0,255,45);
+  rectMode(CENTER);
+  rect(650,850,1300,100);
+  
+  strokeWeight(30);
+  stroke(0);
+  line(0,800,647,800);
+  
+  noStroke();
+  fill(220,170,0);
+  rectMode(CORNERS);
+  rect(650,800,1300,815.5);
+  
+  noStroke();
+  fill(255);
+  rectMode(CORNERS);
+  rect(0,783,650,800);
+  
+   noStroke();
+  fill(105,0,145);
+  rectMode(CORNERS);
+  rect(650,783,1300,800);
+  
+  triangle(0,55,345,123,650,25);
+  fill(255);
+  triangle(1300,55,955,123,650,25);
+  
+  strokeWeight(10);
+  stroke(255);
+  fill(0,255,45);
+  beginShape();
+  vertex(100,870);
+  vertex(30,500);
+  vertex(230,320);
+  vertex(190,200);
+  vertex(590,700);
+  endShape();
+  
+  strokeWeight(10);
+  stroke(105,0,145);
+  beginShape();
+  vertex(1200,870);
+  vertex(1270,500);
+  vertex(1170,320);
+  vertex(1210,200);
+  vertex(710,700);
+  endShape();
+  
+  noStroke();
+  fill(220,170,0);
+  beginShape();
+  vertex(1075,700);
+  vertex(800,400);
+  vertex(1170,720);
+  vertex(950,850);
+  endShape();
+  
+  fill(0);
+  beginShape();
+  vertex(225,700);
+  vertex(500,400);
+  vertex(130,720);
+  vertex(350,850);
+  endShape();
+  
+  
+  
+  stroke(105,0,145);
+  noFill();
+  beginShape();
+  vertex(45,732);
+  vertex(452,37);
+  vertex(300,572);
+  vertex(212,543);
+  vertex(263,546);
+  vertex(12,12);
+  endShape();
+  
+  stroke(255);
+  beginShape();
+  vertex(1255,732);
+  vertex(848,37);
+  vertex(1000,572);
+  vertex(1088,543);
+  vertex(1037,546);
+  vertex(1288,12);
+  endShape();
+  
+ 
+  
+  //"face" underneath moveable
+  noStroke();
+  fill(0);
+  rectMode(CORNERS);
+  rect(645,250,575,450);
+ 
+  strokeWeight(5); 
+  stroke(105,0,145);
+  noFill();
+  ellipseMode(CENTER);
+  ellipse(575,450,35,42);
+  ellipse(575,400,52,36);
+  ellipse(575,300,100,65);
+  ellipse(580,350,60,210);
+ 
+  
+  noStroke();
+  fill(220,170,0);
+  rect(655,300,690,450);
+  triangle(655,250,724,295,655,295);
+  triangle(695,300,714,300,695,375);
+  triangle(695,449,696,392,723,402);
+  triangle(695,325,695,379,723,388);
+   strokeWeight(10);
+   stroke(255);
+  fill(0);
+  point(703,310);
+  strokeWeight(4);
+  stroke(0);
+  point(704,310);
+ 
+  //Greetings!
+  //this press will show up in the green bar in the bottom
+if (mousePressed){
+  stroke(0); 
+  
+  } else{
+  stroke (0,255,45);
+}
+  strokeWeight(10);
+  line(630,890,670,890);
+  line(630,888,630,830);
+  line(690,890,730,890);
+  line(690,888,690,830);
+  line(610,890,570,890);
+  line(600,860,570,860);
+  line(610,830,570,830);
+  line(570,890,570,830);
+  line(550,890,550,830);
+  line(550,860,510,860);
+  line(510,890,510,830);
+  noFill();
+  ellipseMode(CENTER);
+  ellipse(765,860,45,60); 
+
+  //moveable cover
+   noStroke();
+  fill(105,0,145);
+  rectMode(CORNERS);
+  rect(mouseX-75,mouseY+100,mouseX-5,mouseY-100);
+  fill(255);
+  rect(mouseX+5,mouseY-50,mouseX+40,mouseY+100);
+  triangle(mouseX+5,mouseY-101,mouseX+75,mouseY-55,mouseX+5,mouseY-55);
+  triangle(mouseX+45,mouseY-50,mouseX+65,mouseY-50,mouseX+45,mouseY+25);
+  triangle(mouseX+45,mouseY+100,mouseX+45,mouseY+40,mouseX+75,mouseY+50);
+  triangle(mouseX+45,mouseY-25,mouseX+45,mouseY+30,mouseX+75,mouseY+40);
+  
+
+
+}
 
   </script>
   <canvas id="mycanvas4"></canvas>
